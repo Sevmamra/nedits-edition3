@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | NEDITS Edition</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"/>
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="libs/aos/aos.css"/>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/animations.css"/>
+  <link rel="stylesheet" href="css/responsive.css"/>
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon"/>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container flex header-content" data-aos="fade-down">
+      <img src="assets/images/logo.png" alt="Logo" class="logo" />
+      <h1 class="brand-title">NEDITS <span>Edition</span></h1>
+    </div>
+    <p class="tagline" data-aos="fade-up">Reach out. We're here to help.</p>
+  </header>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <ul class="nav-links container">
+      <li><a href="index.html#home">Home</a></li>
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="index.html#testimonials">Testimonials</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Contact Hero -->
+  <section class="hero-section" style="background-image: url('assets/images/hero-bg/hero-bg3.jpg');">
+    <div class="hero-overlay"></div>
+    <div class="hero-content" data-aos="zoom-in">
+      <h2>Get In <span>Touch</span></h2>
+      <p>We’re ready to bring your ideas to life.</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section contact-section">
+    <div class="container" data-aos="fade-up">
+      <h2 class="section-title">Send Us a Message</h2>
+      <form class="contact-form" action="https://forms.gle/dummy" method="POST" target="_blank">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn btn-secondary">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Optional: Google Map Embed -->
+  <!--
+  <section class="section" data-aos="fade-up">
+    <div class="container">
+      <iframe src="https://www.google.com/maps/embed?pb=..." width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </section>
+  -->
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="about.html">About</a>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+      </div>
+      <div class="footer-social">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+      <p>&copy; 2025 NEDITS Edition. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="libs/aos/aos.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/form.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+  </script>
+</body>
+</html>
