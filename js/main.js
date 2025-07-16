@@ -1,4 +1,6 @@
-// ============== Hero Background Slideshow ==============
+// ==========================
+// Hero Background Slideshow
+// ==========================
 const heroSection = document.querySelector('.hero-section');
 const bgImages = [
   'assets/images/hero-bg/hero-bg1.jpg',
@@ -13,47 +15,63 @@ function cycleHeroBg() {
 }
 setInterval(cycleHeroBg, 4000);
 
-// ============== Service Card Glow Toggle ==============
+// ==========================
+// Services Card Glow + Routing
+// ==========================
 const cards = document.querySelectorAll('.service-card');
+
 cards.forEach(card => {
   card.addEventListener('click', () => {
+    // glow effect
     cards.forEach(c => c.classList.remove('active'));
     card.classList.add('active');
+
+    // Navigate internally to corresponding service page
+    const heading = card.querySelector('h3')?.textContent.toLowerCase().replace(/\s+/g, '-');
+    if (heading) {
+      window.location.href = `services/${heading}.html`;
+    }
   });
 });
 
-// ============== Scroll to Anchor (Smooth) ==============
+// ==========================
+// Smooth Anchor Scroll
+// ==========================
 document.querySelectorAll('.nav-links a').forEach(link => {
   link.addEventListener('click', e => {
     if (link.hash) {
-      e.preventDefault();
       const target = document.querySelector(link.hash);
       if (target) {
+        e.preventDefault();
         target.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
     }
   });
 });
 
-// ============== Optional: Manual Animation Trigger ==============
+// ==========================
+// Scroll-based Manual Animation (fallback)
+// ==========================
 const animatedItems = document.querySelectorAll('.animated');
 
-const onScroll = () => {
+const triggerScrollAnimations = () => {
   animatedItems.forEach(el => {
     const rect = el.getBoundingClientRect();
-    if (rect.top < window.innerHeight - 50) {
+    if (rect.top < window.innerHeight - 80) {
       el.classList.add('visible');
     }
   });
 };
+window.addEventListener('scroll', triggerScrollAnimations);
+window.addEventListener('load', triggerScrollAnimations);
 
-window.addEventListener('scroll', onScroll);
-window.addEventListener('load', onScroll);
-
-// ============== AOS Fallback ==============
+// ==========================
+// AOS Animation Init (if available)
+// ==========================
 if (typeof AOS !== 'undefined') {
   AOS.init({
     duration: 1000,
-    once: true
+    once: true,
+    easing: 'ease-out',
   });
 }
