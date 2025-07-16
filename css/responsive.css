@@ -1,43 +1,77 @@
 /* ===========================
-   Base Mobile Adjustments
+   Base Mobile & Tablet
 =========================== */
 @media (max-width: 991px) {
-  .nav-links {
+  .flex {
     flex-direction: column;
-    gap: 12px;
-    padding: 20px 0;
+    align-items: center;
+    text-align: center;
   }
 
-  .hero-content h2 {
-    font-size: 36px;
+  .logo {
+    height: 70px;
+  }
+
+  .header-title-img {
+    height: 80px;
+    margin-top: 10px;
+  }
+
+  .tagline {
+    font-size: 16px;
+    margin-top: 5px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px 0;
+  }
+
+  .hero-section {
+    height: 80vh;
+    padding-top: 40px;
+  }
+
+  .hero-title-img {
+    max-width: 85%;
+    margin-bottom: 10px;
   }
 
   .hero-content p {
-    font-size: 16px;
+    font-size: 18px;
+  }
+
+  .btn-primary {
+    margin-top: 20px;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .services-grid > *:nth-child(4) {
+    grid-column: 2;
+  }
+
+  .services-grid > *:nth-child(5) {
+    grid-column: 2;
   }
 
   .section-title {
     font-size: 28px;
-    padding-left: 10px;
+    padding-left: 12px;
   }
 
-  .services-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-  }
-
-  .testimonial-card {
-    padding: 20px;
-  }
-
-  .about-section .about-text,
+  .about-text,
+  .testimonial-card,
   .contact-form {
     padding: 20px;
-  }
-
-  .btn {
-    font-size: 14px;
-    padding: 10px 24px;
   }
 }
 
@@ -51,53 +85,68 @@
   }
 
   .logo {
-    height: 50px;
+    height: 60px;
     margin-bottom: 10px;
   }
 
-  .brand-title {
-    font-size: 24px;
+  .header-title-img {
+    height: 60px;
   }
 
   .tagline {
     font-size: 14px;
   }
 
-  .hero-section {
-    height: 90vh;
+  .nav-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
   }
 
-  .hero-content h2 {
-    font-size: 28px;
+  .hero-section {
+    height: 90vh;
+    padding: 20px;
+  }
+
+  .hero-title-img {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 10px 24px;
   }
 
   .services-grid {
     grid-template-columns: 1fr;
+    gap: 16px;
   }
 
-  .service-card {
-    padding: 25px 15px;
+  .footer-links,
+  .footer-social {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
   }
 
-  .testimonial-card {
-    font-size: 14px;
+  .footer-links a,
+  .footer-social a {
+    display: inline-block;
+    margin: 5px 10px;
   }
 
   .contact-form input,
   .contact-form textarea {
     font-size: 14px;
     padding: 12px;
-  }
-
-  .footer-links,
-  .footer-social {
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .footer-links a,
-  .footer-social a {
-    display: block;
-    margin: 5px 0;
   }
 }
