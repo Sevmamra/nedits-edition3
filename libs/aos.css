@@ -1,8 +1,7 @@
-/* AOS-like fade and scroll animations */
 [data-aos] {
   opacity: 0;
   transform: translateY(30px);
-  transition: opacity 1s ease, transform 1s ease;
+  transition: all 0.8s ease-out;
 }
 
 [data-aos].aos-animate {
@@ -10,26 +9,15 @@
   transform: translateY(0);
 }
 
-[data-aos="fade-up"] {
-  transform: translateY(40px);
-}
-
 [data-aos="fade-right"] {
   transform: translateX(-40px);
 }
-
 [data-aos="fade-left"] {
   transform: translateX(40px);
 }
-
 [data-aos="zoom-in"] {
   transform: scale(0.8);
 }
-
 [data-aos="zoom-in"].aos-animate {
   transform: scale(1);
-}
-
-[data-aos][data-aos-delay] {
-  transition-delay: var(--aos-delay, 0s);
 }
