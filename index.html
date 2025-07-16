@@ -5,28 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nedits Edition | Creative Studio</title>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link href="libs/aos/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <!-- AOS (Animate on Scroll) Library -->
-  <link href="libs/aos/aos.css" rel="stylesheet" />
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
 
-  <!-- FontAwesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
-  <!-- Custom Styles -->
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/animations.css" />
-  <link rel="stylesheet" href="css/responsive.css" />
-  <link rel="stylesheet" href="libs/aos/aos.css" />
-
-
-  <!-- Favicon -->
-  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
-  
-  <!-- Manifest for PWA -->
-  <link rel="manifest" href="manifest.json" />
-
+  <!-- Favicon & Manifest -->
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+  <link rel="manifest" href="manifest.json">
 </head>
 
 <body>
@@ -34,8 +25,9 @@
   <!-- Header -->
   <header class="site-header">
     <div class="container flex header-content" data-aos="fade-down">
-      <img src="assets/images/logo.png" alt="NEDITS Logo" class="logo" />
-      <h1 class="brand-title">NEDITS <span>Edition</span></h1>
+      <img src="assets/images/logo.png" alt="Logo" class="logo">
+      <!-- Replace text title with PNG -->
+      <img src="assets/images/header-title.png" alt="NEDITS Edition" class="header-title-img">
     </div>
     <p class="tagline" data-aos="fade-up">Your Creative Digital Partner</p>
   </header>
@@ -46,79 +38,78 @@
       <li><a href="#home">Home</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#about">About</a></li>
-      <li><a href="#testimonials">Testimonials</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#testimonials">What Our Clients Say</a></li>
+      <li><a href="#contact">Contact Us</a></li>
     </ul>
   </nav>
 
   <!-- Hero Section -->
   <section id="home" class="hero-section">
     <div class="hero-overlay"></div>
-    <div class="hero-content" data-aos="zoom-in">
-      <h2>Welcome to <span>NEDITS Edition</span></h2>
-      <p>Creative. Bold. Professional.</p>
-      <a href="#services" class="btn btn-primary">Explore Services</a>
+    <div class="hero-content" data-aos="zoom-in" data-aos-delay="200">
+      <!-- Hero title with PNG -->
+      <img src="assets/images/hero-title.png" alt="Welcome to NEDITS Edition" class="hero-title-img slide-in-down">
+      <p class="hero-tagline slide-in-up" data-aos="fade-up" data-aos-delay="400">Creative. Bold. Professional.</p>
+      <a href="#services" class="btn btn-primary fade-in" data-aos="fade-up" data-aos-delay="600">Explore Services</a>
     </div>
   </section>
 
   <!-- Services -->
   <section id="services" class="section services-section">
     <div class="container">
-      <h2 class="section-title" data-aos="fade-right">Our Services</h2>
+      <h2 class="section-title slide-in-left" data-aos="slide-up">Our Services</h2>
       <div class="services-grid">
-        <div class="service-card" data-aos="flip-left">
-          <i class="fas fa-paint-brush service-icon"></i>
+        <a href="services/graphic.html" class="service-card" data-aos="fade-up" data-aos-delay="100">
+          <img src="assets/images/icons/graphic.png" alt="Graphic" class="service-icon-png">
           <h3>Graphic Design</h3>
-          <p>Creative posters, branding kits, social media posts, and more.</p>
-        </div>
-        <div class="service-card" data-aos="flip-left" data-aos-delay="100">
-          <i class="fas fa-video service-icon"></i>
+          <p>Creative posters, branding kits & social media posts.</p>
+        </a>
+        <a href="services/video.html" class="service-card" data-aos="fade-up" data-aos-delay="200">
+          <img src="assets/images/icons/video.png" alt="Video" class="service-icon-png">
           <h3>Video Editing</h3>
-          <p>Professional reels, intros, promos for social and digital media.</p>
-        </div>
-        <div class="service-card" data-aos="flip-left" data-aos-delay="200">
-          <i class="fas fa-code service-icon"></i>
+          <p>Professional reels, promos & intros.</p>
+        </a>
+        <a href="services/web.html" class="service-card" data-aos="fade-up" data-aos-delay="300">
+          <img src="assets/images/icons/web.png" alt="Web Dev" class="service-icon-png">
           <h3>Web Development</h3>
-          <p>Clean, fast, responsive websites with SEO optimization.</p>
-        </div>
-        <div class="service-card" data-aos="flip-left" data-aos-delay="300">
-          <i class="fas fa-bullhorn service-icon"></i>
-          <h3>Social Media Strategy</h3>
-          <p>Content planning, scheduling, and growth strategy packages.</p>
-        </div>
-        <div class="service-card" data-aos="flip-left" data-aos-delay="400">
-          <i class="fas fa-pen-nib service-icon"></i>
+          <p>Clean, fast & SEO-friendly websites.</p>
+        </a>
+        <a href="services/social.html" class="service-card" data-aos="fade-up" data-aos-delay="400">
+          <img src="assets/images/icons/social.png" alt="Social Media" class="service-icon-png">
+          <h3>Social Strategy</h3>
+          <p>Content planning & growth strategy</p>
+        </a>
+        <a href="services/brand.html" class="service-card" data-aos="fade-up" data-aos-delay="500">
+          <img src="assets/images/icons/brand.png" alt="Brand Identity" class="service-icon-png">
           <h3>Brand Identity</h3>
-          <p>Logos, typography, palette design, and complete brand kits.</p>
-        </div>
+          <p>Logos, typography & complete branding</p>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- About -->
+  <!-- About Us -->
   <section id="about" class="section about-section">
     <div class="container" data-aos="fade-up">
-      <h2 class="section-title">About Us</h2>
-      <p class="about-text">
-        Nedits Edition is a premium creative agency based in India. We help influencers, startups, and businesses amplify their digital identity through powerful designs and engaging content.
-      </p>
+      <h2 class="section-title slide-in-left">About Us</h2>
+      <p class="about-text typing-animation"></p>
     </div>
   </section>
 
   <!-- Testimonials -->
   <section id="testimonials" class="section testimonials-section">
     <div class="container">
-      <h2 class="section-title" data-aos="fade-right">What Clients Say</h2>
+      <h2 class="section-title slide-in-right">What Our Clients Say</h2>
       <div class="testimonials-grid">
-        <div class="testimonial-card" data-aos="fade-up">
+        <div class="testimonial-card slide-in-left" data-aos="fade-up" data-aos-delay="100">
           <p>"NEDITS took our brand visuals to a whole new level! Truly premium!"</p>
           <span>- Priya S., Influencer</span>
         </div>
-        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="150">
+        <div class="testimonial-card slide-in-right" data-aos="fade-up" data-aos-delay="200">
           <p>"Loved the UI of our new website. Their team nailed it!"</p>
           <span>- Akash R., Founder</span>
         </div>
-        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="testimonial-card slide-in-left" data-aos="fade-up" data-aos-delay="300">
           <p>"Most creative editors I've worked with. 100% recommend!"</p>
           <span>- Manav T., YouTuber</span>
         </div>
@@ -129,19 +120,19 @@
   <!-- Contact -->
   <section id="contact" class="section contact-section">
     <div class="container" data-aos="fade-up">
-      <h2 class="section-title">Get In Touch</h2>
+      <h2 class="section-title slide-in-left">Contact Us</h2>
       <form class="contact-form" action="https://forms.gle/dummy" method="POST" target="_blank">
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="Your Email" required />
-        <textarea placeholder="Your Message" rows="5" required></textarea>
-        <button class="btn btn-secondary" type="submit">Send Message</button>
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button class="btn btn-secondary fade-in" data-aos="fade-up" data-aos-delay="200" type="submit">Send Message</button>
       </form>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container">
+  <footer class="site-footer" data-aos="fade-up">
+    <div class="container flex footer-content">
       <div class="footer-links">
         <a href="#about">About</a>
         <a href="#">Privacy</a>
@@ -152,8 +143,8 @@
         <a href="#"><i class="fab fa-facebook"></i></a>
         <a href="#"><i class="fab fa-youtube"></i></a>
       </div>
-      <p>&copy; 2025 NEDITS Edition. All rights reserved.</p>
     </div>
+    <p data-aos="fade-up">&copy; 2025 NEDITS Edition. All rights reserved.</p>
   </footer>
 
   <!-- Scripts -->
@@ -161,13 +152,13 @@
   <script src="js/main.js"></script>
   <script src="js/form.js"></script>
   <script src="js/scroll.js"></script>
-
-
   <script>
     AOS.init({
-      duration: 1000,
-      once: true
+      duration: 800,
+      once: true,
+      easing: 'ease-out'
     });
   </script>
+
 </body>
 </html>
