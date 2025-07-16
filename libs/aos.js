@@ -1,23 +1,25 @@
 document.addEventListener('DOMContentLoaded', () => {
   const elements = document.querySelectorAll('[data-aos]');
-
-  const initAOS = () => {
+  
+  const animate = () => {
     elements.forEach(el => {
       const rect = el.getBoundingClientRect();
-      if (rect.top < window.innerHeight - 100) {
+      const isVisible = rect.top < window.innerHeight - 80;
+
+      if (isVisible) {
         el.classList.add('aos-animate');
       }
     });
   };
 
-  // Delay support
+  // Support delay attributes
   elements.forEach(el => {
     const delay = el.getAttribute('data-aos-delay');
     if (delay) {
-      el.style.setProperty('--aos-delay', `${delay}ms`);
+      el.style.transitionDelay = `${delay}ms`;
     }
   });
 
-  window.addEventListener('scroll', initAOS);
-  window.addEventListener('load', initAOS);
+  window.addEventListener('scroll', animate);
+  window.addEventListener('load', animate);
 });
