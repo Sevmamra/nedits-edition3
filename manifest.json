@@ -1,16 +1,15 @@
-{
-  "name": "NEDITS Edition",
+{{
+  "name": "NEDITS Edition - Creative Studio",
   "short_name": "NEDITS",
-  "description": "Creative digital agency for graphics, video, and web design.",
   "start_url": "index.html",
   "display": "standalone",
-  "background_color": "#ffffff",
+  "background_color": "#111111",
   "theme_color": "#7b0091",
-  "orientation": "portrait",
+  "description": "NEDITS Edition helps you with graphic design, video editing, web development, social media strategy, and brand identity.",
   "icons": [
     {
       "src": "assets/favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
+      "sizes": "48x48",
       "type": "image/x-icon"
     },
     {
