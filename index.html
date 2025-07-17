@@ -2,114 +2,114 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nedits Edition | Creative Studio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NEDITS Edition | Creative Studio</title>
 
-  <!-- Fonts & Icons -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-  <link href="libs/aos/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"/>
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/animations.css">
-  <link rel="stylesheet" href="css/responsive.css">
+  <!-- AOS -->
+  <link rel="stylesheet" href="libs/aos/aos.css"/>
 
-  <!-- Favicon & Manifest -->
-  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
-  <link rel="manifest" href="manifest.json">
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/animations.css"/>
+  <link rel="stylesheet" href="css/components.css"/>
+  <link rel="stylesheet" href="css/responsive.css"/>
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon"/>
 </head>
-
 <body>
 
   <!-- Header -->
   <header class="site-header">
-    <div class="container flex header-content" data-aos="fade-down">
-      <img src="assets/images/logo.png" alt="Logo" class="logo">
-      <!-- Replace text title with PNG -->
-      <img src="assets/images/header-title.png" alt="NEDITS Edition" class="header-title-img">
+    <div class="container flex header-content">
+      <img src="assets/images/logo.png" alt="NEDITS Edition Logo" class="logo" />
+      <img src="assets/images/header-title.png" alt="NEDITS Edition Title" class="header-title-img" />
     </div>
-    <p class="tagline" data-aos="fade-up">Your Creative Digital Partner</p>
+    <p class="tagline">Your Creative Digital Partner</p>
   </header>
 
-  <!-- Navigation -->
+  <!-- Navbar -->
   <nav class="navbar">
     <ul class="nav-links container">
       <li><a href="#home">Home</a></li>
       <li><a href="#services">Services</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#testimonials">What Our Clients Say</a></li>
-      <li><a href="#contact">Contact Us</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 
   <!-- Hero Section -->
   <section id="home" class="hero-section">
     <div class="hero-overlay"></div>
-    <div class="hero-content" data-aos="zoom-in" data-aos-delay="200">
-      <!-- Hero title with PNG -->
-      <img src="assets/images/hero-title.png" alt="Welcome to NEDITS Edition" class="hero-title-img slide-in-down">
-      <p class="hero-tagline slide-in-up" data-aos="fade-up" data-aos-delay="400">Creative. Bold. Professional.</p>
-      <a href="#services" class="btn btn-primary fade-in" data-aos="fade-up" data-aos-delay="600">Explore Services</a>
+    <div class="hero-content">
+      <img src="assets/images/hero-title.png" alt="Welcome to NEDITS Edition" class="hero-title-img" />
+      <a href="#services" class="btn btn-primary">Explore Services</a>
     </div>
   </section>
 
-  <!-- Services -->
+  <!-- Our Services -->
   <section id="services" class="section services-section">
     <div class="container">
-      <h2 class="section-title slide-in-left" data-aos="slide-up">Our Services</h2>
+      <h2 class="section-title animate-line">Our Services</h2>
       <div class="services-grid">
-        <a href="services/graphic.html" class="service-card" data-aos="fade-up" data-aos-delay="100">
-          <img src="assets/images/icons/graphic.png" alt="Graphic" class="service-icon-png">
+        <div class="service-card slide-up" data-service="graphic-design">
+          <img src="assets/images/services-icons/graphic.png" alt="Graphic Design" class="service-icon-img" />
           <h3>Graphic Design</h3>
-          <p>Creative posters, branding kits & social media posts.</p>
-        </a>
-        <a href="services/video.html" class="service-card" data-aos="fade-up" data-aos-delay="200">
-          <img src="assets/images/icons/video.png" alt="Video" class="service-icon-png">
+          <p>Creative posters, branding kits, social media posts, and more.</p>
+        </div>
+        <div class="service-card slide-up" data-service="video-editing">
+          <img src="assets/images/services-icons/video.png" alt="Video Editing" class="service-icon-img" />
           <h3>Video Editing</h3>
-          <p>Professional reels, promos & intros.</p>
-        </a>
-        <a href="services/web.html" class="service-card" data-aos="fade-up" data-aos-delay="300">
-          <img src="assets/images/icons/web.png" alt="Web Dev" class="service-icon-png">
+          <p>Professional reels, intros, promos for social and digital media.</p>
+        </div>
+        <div class="service-card slide-up" data-service="web-development">
+          <img src="assets/images/services-icons/web.png" alt="Web Development" class="service-icon-img" />
           <h3>Web Development</h3>
-          <p>Clean, fast & SEO-friendly websites.</p>
-        </a>
-        <a href="services/social.html" class="service-card" data-aos="fade-up" data-aos-delay="400">
-          <img src="assets/images/icons/social.png" alt="Social Media" class="service-icon-png">
-          <h3>Social Strategy</h3>
-          <p>Content planning & growth strategy</p>
-        </a>
-        <a href="services/brand.html" class="service-card" data-aos="fade-up" data-aos-delay="500">
-          <img src="assets/images/icons/brand.png" alt="Brand Identity" class="service-icon-png">
+          <p>Clean, fast, responsive websites with SEO optimization.</p>
+        </div>
+        <div class="service-card slide-up" data-service="social-strategy">
+          <img src="assets/images/services-icons/social.png" alt="Social Media Strategy" class="service-icon-img" />
+          <h3>Social Media Strategy</h3>
+          <p>Content planning, scheduling, and growth strategy packages.</p>
+        </div>
+        <div class="service-card slide-up" data-service="brand-identity">
+          <img src="assets/images/services-icons/brand.png" alt="Brand Identity" class="service-icon-img" />
           <h3>Brand Identity</h3>
-          <p>Logos, typography & complete branding</p>
-        </a>
+          <p>Logos, typography, palette design, and complete brand kits.</p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- About Us -->
   <section id="about" class="section about-section">
-    <div class="container" data-aos="fade-up">
-      <h2 class="section-title slide-in-left">About Us</h2>
-      <p class="about-text typing-animation"></p>
+    <div class="container">
+      <h2 class="section-title animate-line">About Us</h2>
+      <p class="about-text typing-text">NEDITS Edition is a premium creative agency based in India. We help influencers, startups, and businesses amplify their digital identity through powerful designs and engaging content.</p>
     </div>
   </section>
 
   <!-- Testimonials -->
   <section id="testimonials" class="section testimonials-section">
     <div class="container">
-      <h2 class="section-title slide-in-right">What Our Clients Say</h2>
+      <h2 class="section-title animate-line">What Our Clients Say</h2>
       <div class="testimonials-grid">
-        <div class="testimonial-card slide-in-left" data-aos="fade-up" data-aos-delay="100">
+        <div class="testimonial-card left-in">
           <p>"NEDITS took our brand visuals to a whole new level! Truly premium!"</p>
           <span>- Priya S., Influencer</span>
         </div>
-        <div class="testimonial-card slide-in-right" data-aos="fade-up" data-aos-delay="200">
+        <div class="testimonial-card right-in">
           <p>"Loved the UI of our new website. Their team nailed it!"</p>
           <span>- Akash R., Founder</span>
         </div>
-        <div class="testimonial-card slide-in-left" data-aos="fade-up" data-aos-delay="300">
+        <div class="testimonial-card left-in">
           <p>"Most creative editors I've worked with. 100% recommend!"</p>
           <span>- Manav T., YouTuber</span>
         </div>
@@ -117,24 +117,11 @@
     </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="section contact-section">
-    <div class="container" data-aos="fade-up">
-      <h2 class="section-title slide-in-left">Contact Us</h2>
-      <form class="contact-form" action="https://forms.gle/dummy" method="POST" target="_blank">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-        <button class="btn btn-secondary fade-in" data-aos="fade-up" data-aos-delay="200" type="submit">Send Message</button>
-      </form>
-    </div>
-  </section>
-
   <!-- Footer -->
-  <footer class="site-footer" data-aos="fade-up">
-    <div class="container flex footer-content">
+  <footer class="site-footer">
+    <div class="container footer-flex">
       <div class="footer-links">
-        <a href="#about">About</a>
+        <a href="about.html">About</a>
         <a href="#">Privacy</a>
         <a href="#">Terms</a>
       </div>
@@ -144,21 +131,14 @@
         <a href="#"><i class="fab fa-youtube"></i></a>
       </div>
     </div>
-    <p data-aos="fade-up">&copy; 2025 NEDITS Edition. All rights reserved.</p>
+    <p>&copy; 2025 NEDITS Edition. All rights reserved.</p>
   </footer>
 
   <!-- Scripts -->
   <script src="libs/aos/aos.js"></script>
   <script src="js/main.js"></script>
-  <script src="js/form.js"></script>
+  <script src="js/loader.js"></script>
+  <script src="js/typing.js"></script>
   <script src="js/scroll.js"></script>
-  <script>
-    AOS.init({
-      duration: 800,
-      once: true,
-      easing: 'ease-out'
-    });
-  </script>
-
 </body>
 </html>
