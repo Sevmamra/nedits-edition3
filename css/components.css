@@ -1,0 +1,83 @@
+/* ===========================
+   Header Title Image
+=========================== */
+.header-title-img {
+  height: 50px;
+}
+
+/* ===========================
+   Hero Title Image
+=========================== */
+.hero-title-img {
+  width: 70%;
+  max-width: 500px;
+  margin-bottom: 20px;
+}
+
+/* ===========================
+   Section Titles Animated Line
+=========================== */
+.section-title.animate-line {
+  position: relative;
+  display: inline-block;
+}
+
+.section-title.animate-line::before {
+  content: '|';
+  position: absolute;
+  left: -12px;
+  color: #7b0091;
+  animation: lineMove 1s forwards;
+}
+
+@keyframes lineMove {
+  from { transform: translateX(-30px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+/* ===========================
+   Active Glow Effect
+=========================== */
+.service-card.active {
+  box-shadow: 0 0 40px rgba(123, 0, 145, 0.5);
+  transform: scale(1.05);
+}
+
+/* ===========================
+   Footer Flex
+=========================== */
+.footer-flex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* ===========================
+   Service Detail Page
+=========================== */
+.service-detail {
+  padding: 60px 0;
+}
+
+.service-detail-img {
+  max-width: 300px;
+  margin-top: 20px;
+}
+
+.service-text {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-top: 20px;
+}
+
+/* ===========================
+   Form Message Styling
+=========================== */
+.form-message {
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.form-message.success { color: green; }
+.form-message.error { color: red; }
