@@ -1,50 +1,58 @@
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.querySelector('.contact-form');
+  if (!form) return; // Safe check for pages without form
+
   const inputs = form.querySelectorAll('input, textarea');
   const submitBtn = form.querySelector('button');
-  const messageBox = document.createElement('div');
+  const messageBox = document.querySelector('.form-message');
 
-  messageBox.className = 'form-message';
-  form.appendChild(messageBox);
-
-  // ========== Validate Fields ==========
-  const isValidEmail = (email) => /\S+@\S+\.\S+/.test(email);
+  // Validate Email Format
+  const isValidEmail = email => /\S+@\S+\.\S+/.test(email);
 
   const validateForm = () => {
     let valid = true;
+
     inputs.forEach(input => {
-      const value = input.value.trim();
-      if (!value) valid = false;
-      if (input.type === "email" && !isValidEmail(value)) valid = false;
+      input.style.borderColor = '#ddd'; // Reset borders
+
+      if (!input.value.trim()) {
+        valid = false;
+        input.style.borderColor = 'red';
+      }
+
+      if (input.type === "email" && !isValidEmail(input.value)) {
+        valid = false;
+        input.style.borderColor = 'red';
+      }
     });
+
     return valid;
   };
 
-  // ========== Show Feedback ==========
-  const showMessage = (msg, isSuccess = true) => {
+  // Show Message Function
+  const showMessage = (msg, success = true) => {
     messageBox.textContent = msg;
-    messageBox.style.color = isSuccess ? '#2ecc71' : '#e74c3c';
-    messageBox.style.marginTop = '10px';
-    messageBox.style.fontWeight = '600';
-    messageBox.style.transition = 'all 0.3s ease-in-out';
+    messageBox.className = success ? 'form-message success' : 'form-message error';
+    messageBox.setAttribute('role', 'alert');
   };
 
-  // ========== Submit Handler ==========
+  // Handle Submit
   form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
     if (!validateForm()) {
-      e.preventDefault();
-      showMessage("❌ Please fill all fields correctly.", false);
+      showMessage("Please fill all fields correctly.", false);
       return;
     }
 
-    showMessage("⏳ Sending message...");
+    showMessage("Sending message...");
     submitBtn.disabled = true;
 
-    // Reset form after submission delay
+    // Simulate Sending
     setTimeout(() => {
-      showMessage("✅ Message sent successfully!", true);
-      inputs.forEach(i => i.value = '');
       submitBtn.disabled = false;
-    }, 3000);
+      showMessage("Message sent successfully!", true);
+      inputs.forEach(i => i.value = '');
+    }, 2000);
   });
 });
