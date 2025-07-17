@@ -5,32 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About Us | NEDITS Edition</title>
 
-  <!-- Google Fonts -->
+  <!-- Fonts & Styles -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"/>
-
-  <!-- AOS -->
   <link rel="stylesheet" href="libs/aos/aos.css"/>
-
-  <!-- Styles -->
   <link rel="stylesheet" href="css/style.css"/>
   <link rel="stylesheet" href="css/animations.css"/>
+  <link rel="stylesheet" href="css/components.css"/>
   <link rel="stylesheet" href="css/responsive.css"/>
 
-  <!-- Favicon -->
   <link rel="icon" href="assets/favicon.ico" type="image/x-icon"/>
 </head>
 <body>
 
-  <!-- Header -->
   <header class="site-header">
-    <div class="container flex header-content" data-aos="fade-down">
-      <img src="assets/images/logo.png" alt="Logo" class="logo" />
-      <h1 class="brand-title">NEDITS <span>Edition</span></h1>
+    <div class="container flex header-content">
+      <img src="assets/images/logo.png" alt="NEDITS Edition Logo" class="logo" />
+      <img src="assets/images/header-title.png" alt="NEDITS Edition Title" class="header-title-img" />
     </div>
-    <p class="tagline" data-aos="fade-up">Empowering Brands Digitally</p>
+    <p class="tagline">Empowering Brands Digitally</p>
   </header>
 
-  <!-- Navbar -->
   <nav class="navbar">
     <ul class="nav-links container">
       <li><a href="index.html#home">Home</a></li>
@@ -41,42 +35,39 @@
     </ul>
   </nav>
 
-  <!-- About Hero -->
   <section class="hero-section" style="background-image: url('assets/images/hero-bg/hero-bg2.jpg');">
     <div class="hero-overlay"></div>
-    <div class="hero-content" data-aos="zoom-in">
-      <h2>About <span>NEDITS Edition</span></h2>
+    <div class="hero-content">
+      <h2 class="section-title animate-line">About <span>NEDITS Edition</span></h2>
       <p>Creative solutions. Real results.</p>
     </div>
   </section>
 
-  <!-- Mission Section -->
   <section class="section about-section">
-    <div class="container" data-aos="fade-up">
-      <h2 class="section-title">Our Mission</h2>
-      <p class="about-text">
-        At NEDITS Edition, our mission is to create visual magic that connects brands to audiences. We deliver design and strategy that amplifies engagement, drives growth, and tells a powerful story. Our team is passionate about pushing creative boundaries and crafting content that matters.
+    <div class="container">
+      <h2 class="section-title animate-line">Our Mission</h2>
+      <p class="about-text typing-text">
+        At NEDITS Edition, our mission is to create visual magic that connects brands to audiences. We deliver design and strategy that amplifies engagement, drives growth, and tells a powerful story.
       </p>
     </div>
   </section>
 
-  <!-- Our Values -->
-  <section class="section" data-aos="fade-up">
+  <section class="section">
     <div class="container">
-      <h2 class="section-title">What We Stand For</h2>
+      <h2 class="section-title animate-line">What We Stand For</h2>
       <div class="services-grid">
-        <div class="service-card">
-          <i class="fas fa-heart service-icon"></i>
+        <div class="service-card slide-up">
+          <img src="assets/images/services-icons/heart.png" alt="Creativity" class="service-icon-img"/>
           <h3>Creativity</h3>
           <p>Design with heart, built with soul. Every project is unique and inspired.</p>
         </div>
-        <div class="service-card">
-          <i class="fas fa-rocket service-icon"></i>
+        <div class="service-card slide-up">
+          <img src="assets/images/services-icons/rocket.png" alt="Innovation" class="service-icon-img"/>
           <h3>Innovation</h3>
           <p>We combine tech with design to build future-ready digital assets.</p>
         </div>
-        <div class="service-card">
-          <i class="fas fa-handshake service-icon"></i>
+        <div class="service-card slide-up">
+          <img src="assets/images/services-icons/handshake.png" alt="Trust" class="service-icon-img"/>
           <h3>Trust</h3>
           <p>Client-first mindset. We communicate, collaborate, and deliver with integrity.</p>
         </div>
@@ -84,9 +75,8 @@
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="site-footer">
-    <div class="container">
+    <div class="container footer-flex">
       <div class="footer-links">
         <a href="about.html">About</a>
         <a href="#">Privacy</a>
@@ -97,15 +87,11 @@
         <a href="#"><i class="fab fa-facebook"></i></a>
         <a href="#"><i class="fab fa-youtube"></i></a>
       </div>
-      <p>&copy; 2025 NEDITS Edition. All rights reserved.</p>
     </div>
+    <p>&copy; 2025 NEDITS Edition. All rights reserved.</p>
   </footer>
 
-  <!-- Scripts -->
   <script src="libs/aos/aos.js"></script>
-  <script src="js/main.js"></script>
-  <script>
-    AOS.init({ duration: 1000, once: true });
-  </script>
+  <script src="js/typing.js"></script>
 </body>
 </html>
