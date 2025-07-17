@@ -1,6 +1,4 @@
-// ==========================
-// Hero Background Slideshow
-// ==========================
+// ==================== Hero Background Slideshow ====================
 const heroSection = document.querySelector('.hero-section');
 const bgImages = [
   'assets/images/hero-bg/hero-bg1.jpg',
@@ -9,69 +7,52 @@ const bgImages = [
 ];
 let bgIndex = 0;
 
+// Preload images
+bgImages.forEach(src => {
+  const img = new Image();
+  img.src = src;
+});
+
 function cycleHeroBg() {
-  heroSection.style.backgroundImage = `url('${bgImages[bgIndex]}')`;
-  bgIndex = (bgIndex + 1) % bgImages.length;
+  if (heroSection) {
+    heroSection.style.backgroundImage = `url('${bgImages[bgIndex]}')`;
+    bgIndex = (bgIndex + 1) % bgImages.length;
+  }
 }
 setInterval(cycleHeroBg, 4000);
 
-// ==========================
-// Services Card Glow + Routing
-// ==========================
-const cards = document.querySelectorAll('.service-card');
+// ==================== Service Card Glow & SPA Load ====================
+const serviceCards = document.querySelectorAll('.service-card');
 
-cards.forEach(card => {
+serviceCards.forEach(card => {
   card.addEventListener('click', () => {
-    // glow effect
-    cards.forEach(c => c.classList.remove('active'));
+    serviceCards.forEach(c => c.classList.remove('active'));
     card.classList.add('active');
 
-    // Navigate internally to corresponding service page
-    const heading = card.querySelector('h3')?.textContent.toLowerCase().replace(/\s+/g, '-');
-    if (heading) {
-      window.location.href = `services/${heading}.html`;
-    }
+    const service = card.getAttribute('data-service');
+    fetch(`services/${service}.html`)
+      .then(res => res.text())
+      .then(html => {
+        document.body.innerHTML = html; // Replace the page with service detail
+        window.scrollTo(0,0);
+      });
   });
 });
 
-// ==========================
-// Smooth Anchor Scroll
-// ==========================
+// ==================== Smooth Scroll for Navbar Links ====================
 document.querySelectorAll('.nav-links a').forEach(link => {
   link.addEventListener('click', e => {
-    if (link.hash) {
-      const target = document.querySelector(link.hash);
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
+    if (link.hash && document.querySelector(link.hash)) {
+      e.preventDefault();
+      document.querySelector(link.hash).scrollIntoView({ behavior: 'smooth' });
     }
   });
 });
 
-// ==========================
-// Scroll-based Manual Animation (fallback)
-// ==========================
-const animatedItems = document.querySelectorAll('.animated');
-
-const triggerScrollAnimations = () => {
-  animatedItems.forEach(el => {
-    const rect = el.getBoundingClientRect();
-    if (rect.top < window.innerHeight - 80) {
-      el.classList.add('visible');
-    }
-  });
-};
-window.addEventListener('scroll', triggerScrollAnimations);
-window.addEventListener('load', triggerScrollAnimations);
-
-// ==========================
-// AOS Animation Init (if available)
-// ==========================
+// ==================== AOS Initialization ====================
 if (typeof AOS !== 'undefined') {
   AOS.init({
     duration: 1000,
-    once: true,
-    easing: 'ease-out',
+    once: true
   });
 }
